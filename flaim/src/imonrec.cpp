@@ -1055,7 +1055,7 @@ RCODE F_ProcessRecordPage::storeBinaryField(
 	FLMBYTE					ucVal = 0;
 	FLMUINT					uiNibble;
 
-	if (pszFldValue == '\0' || *pszFldValue == '\0')
+	if (pszFldValue == NULL || *pszFldValue == '\0')
 	{
 		goto Exit;
 	}
@@ -1150,7 +1150,7 @@ RCODE F_ProcessRecordPage::storeUnicodeField(
 	FLMUINT				uiLen;
 
 	// If there is no data, then just return.
-	if (pszFldValue == '\0' || *pszFldValue == '\0')
+	if (pszFldValue == NULL || *pszFldValue == '\0')
 	{
 		goto Exit;
 	}
@@ -1190,7 +1190,7 @@ RCODE F_ProcessRecordPage::storeNumberField(
 	FLMUINT			uiVal;
 	FLMINT			iVal;
 
-	if (pszFldValue == '\0' || *pszFldValue == '\0')
+	if (pszFldValue == NULL || *pszFldValue == '\0')
 	{
 		goto Exit;
 	}
@@ -1233,7 +1233,7 @@ RCODE F_ProcessRecordPage::storeBlobField(
 	RCODE					rc = FERR_OK;
 	FlmBlob *			pBlob = NULL;
 
-	if (pszFldValue == '\0' || *pszFldValue == '\0')
+	if (pszFldValue == NULL || *pszFldValue == '\0')
 	{
 		goto Exit;
 	}

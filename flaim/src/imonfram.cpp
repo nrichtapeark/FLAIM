@@ -627,7 +627,7 @@ RCODE F_SecureDbInfo::display(
 
 		// Now, reset the session password if it exists.
 
-		pszPassword = '\0';
+		pszPassword = NULL;
 		if (fnSetSessionValue( pvSession,
 									  FLM_SECURE_PASSWORD,
 									  pszPassword,
